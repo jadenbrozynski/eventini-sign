@@ -48,10 +48,10 @@ import { DocumentSigningPageViewV2 } from '~/components/general/document-signing
 import { DocumentSigningProvider } from '~/components/general/document-signing/document-signing-provider';
 import { DocumentSigningSenderDisabledPage } from '~/components/general/document-signing/document-signing-sender-disabled-page';
 import { EnvelopeSigningProvider } from '~/components/general/document-signing/envelope-signing-provider';
+import { EventiniSourceFooter } from '~/components/general/eventini-source-footer';
 import { RecipientBranding } from '~/components/general/recipient-branding';
 import { useCspNonce } from '~/utils/nonce';
 import { superLoaderJson, useSuperLoaderData } from '~/utils/super-json-loader';
-
 import type { Route } from './+types/_index';
 
 const handleV1Loader = async ({ params, request }: Route.LoaderArgs) => {
@@ -476,15 +476,7 @@ const SigningPageV1 = ({ data }: { data: Awaited<ReturnType<typeof handleV1Loade
               <Trans>Go Back Home</Trans>
             </Link>
           ) : (
-            <p className="mt-36 text-muted-foreground/60 text-sm">
-              <Trans>
-                Want to send slick signing links like this one?{' '}
-                <Link to="https://documenso.com" className="text-documenso-700 hover:text-documenso-600">
-                  Check out Documenso
-                </Link>
-                .
-              </Trans>
-            </p>
+            <EventiniSourceFooter className="mt-36" />
           )}
         </div>
       </div>
@@ -576,15 +568,7 @@ const SigningPageV2 = ({ data }: { data: Awaited<ReturnType<typeof handleV2Loade
               <Trans>Go Back Home</Trans>
             </Link>
           ) : (
-            <p className="mt-36 text-muted-foreground/60 text-sm">
-              <Trans>
-                Want to send slick signing links like this one?{' '}
-                <Link to="https://documenso.com" className="text-documenso-700 hover:text-documenso-600">
-                  Check out Documenso
-                </Link>
-                .
-              </Trans>
-            </p>
+            <EventiniSourceFooter className="mt-36" />
           )}
         </div>
       </div>

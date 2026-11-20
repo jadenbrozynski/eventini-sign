@@ -26,9 +26,9 @@ import { match } from 'ts-pattern';
 import { EnvelopeDownloadDialog } from '~/components/dialogs/envelope-download-dialog';
 import { ClaimAccount } from '~/components/general/claim-account';
 import { DocumentSigningAuthPageView } from '~/components/general/document-signing/document-signing-auth-page';
+import { EventiniSourceFooter } from '~/components/general/eventini-source-footer';
 import { RecipientBranding } from '~/components/general/recipient-branding';
 import { useCspNonce } from '~/utils/nonce';
-
 import type { Route } from './+types/complete';
 
 export async function loader({ params, request }: Route.LoaderArgs) {
@@ -205,7 +205,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
                 </div>
               ))
               .with({ deletedAt: null }, () => (
-                <div className="mt-4 flex items-center text-center text-blue-600">
+                <div className="mt-4 flex items-center text-center text-foreground">
                   <Clock8 className="mr-2 h-5 w-5" />
                   <span className="text-sm">
                     <Trans>Waiting for others to sign</Trans>
@@ -296,6 +296,7 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
             )}
           </div>
         </div>
+        <EventiniSourceFooter className="mt-16" />
       </div>
     </>
   );

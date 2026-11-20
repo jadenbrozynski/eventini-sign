@@ -12,7 +12,7 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
   }
 
   return [
-    { title: 'Documenso - Share' },
+    { title: 'Eventini Sign - Share' },
     { description: 'I just signed a document in style with Documenso!' },
     {
       property: 'og:title',
@@ -69,8 +69,7 @@ export const loader = async ({ request, params: { slug } }: Route.LoaderArgs) =>
     return {};
   }
 
-  // Is hardcoded because this whole meta is hardcoded anyway for Documenso.
-  throw redirect('https://documenso.com');
+  throw redirect('https://eventini.io');
 };
 
 export default function SharePage() {

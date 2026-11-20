@@ -22,7 +22,7 @@ import {
   useLoaderData,
   useMatches,
 } from 'react-router';
-import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes';
+import { Theme, ThemeProvider } from 'remix-themes';
 import { nonceMiddleware } from '~/middleware/nonce';
 import type { Route } from './+types/root';
 import stylesheet from './app.css?url';
@@ -102,10 +102,11 @@ export async function loader({ context, request }: Route.LoaderArgs) {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const { theme, basePath } = useLoaderData<typeof loader>() || {};
+  const { basePath } = useLoaderData<typeof loader>() || {};
 
   return (
-    <ThemeProvider specifiedTheme={theme} themeAction={`${basePath ?? ''}/api/theme`}>
+    // Eventini Sign: always light, regardless of cookie or system preference.
+    <ThemeProvider specifiedTheme={Theme.LIGHT} themeAction={`${basePath ?? ''}/api/theme`}>
       <LayoutContent>{children}</LayoutContent>
     </ThemeProvider>
   );
@@ -122,8 +123,6 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
     ...data
   } = useLoaderData<typeof loader>() || {};
 
-  const [theme] = useTheme();
-
   const basePath = data.basePath ?? '';
 
   // Recipient routes (signing pages) put `documenso-branded` on <body> so the
@@ -138,7 +137,7 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
     // `data-theme`/`class` on <html> before hydration (PreventFlashOnWrongTheme),
     // so the server-rendered attributes never match the client render when the
     // theme is resolved from the system preference. Attribute-only, one level deep.
-    <html translate="no" lang={lang} data-theme={theme} className={theme ?? ''} suppressHydrationWarning>
+    <html translate="no" lang={lang} data-theme="light" className="light dark-mode-disabled" suppressHydrationWarning>
       <head>
         <meta charSet="utf-8" />
         <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}/apple-touch-icon.png`} />
@@ -150,7 +149,6 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links nonce={nonce(cspNonce)} />
         <meta name="google" content="notranslate" />
-        <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} nonce={nonce(cspNonce)} />
 
         {disableAnimations && (
           <style

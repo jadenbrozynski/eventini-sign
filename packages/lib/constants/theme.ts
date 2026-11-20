@@ -21,30 +21,30 @@ import type { TCssVarsSchema } from '../types/css-vars';
  */
 export const DEFAULT_BRAND_COLORS = {
   background: '#ffffff', //              0 0% 100%
-  foreground: '#0f172a', //              222.2 47.4% 11.2%
-  muted: '#f1f5f9', //                   210 40% 96.1%
-  mutedForeground: '#64748b', //         215.4 16.3% 46.9%
+  foreground: '#1c1f24', // Eventini
+  muted: '#f6f7f9', // Eventini
+  mutedForeground: '#6b707d', // Eventini
   popover: '#ffffff', //                 0 0% 100%
-  popoverForeground: '#0f172a', //       222.2 47.4% 11.2%
+  popoverForeground: '#1c1f24', // Eventini
   card: '#ffffff', //                    0 0% 100%
-  cardBorder: '#e2e8f0', //              214.3 31.8% 91.4%
-  cardForeground: '#0f172a', //          222.2 47.4% 11.2%
-  fieldCard: '#e2f8d3', //               95 74% 90%
-  fieldCardBorder: '#a2e771', //         95.08 71.08% 67.45%
-  fieldCardForeground: '#0f172a', //     222.2 47.4% 11.2%
+  cardBorder: '#dbdde3', // Eventini
+  cardForeground: '#1c1f24', // Eventini
+  fieldCard: '#f6f7f9', // Eventini
+  fieldCardBorder: '#1c1f24', // Eventini
+  fieldCardForeground: '#1c1f24', // Eventini
   widget: '#f7f7f7', //                  0 0% 97%
   widgetForeground: '#f2f2f2', //        0 0% 95%
-  border: '#e2e8f0', //                  214.3 31.8% 91.4%
-  input: '#e2e8f0', //                   214.3 31.8% 91.4%
-  primary: '#a2e771', //                 95.08 71.08% 67.45%
-  primaryForeground: '#162c07', //       95.08 71.08% 10%
-  secondary: '#f1f5f9', //               210 40% 96.1%
-  secondaryForeground: '#0f172a', //     222.2 47.4% 11.2%
-  accent: '#f1f5f9', //                  210 40% 96.1%
-  accentForeground: '#0f172a', //        222.2 47.4% 11.2%
+  border: '#dbdde3', // Eventini
+  input: '#dbdde3', // Eventini
+  primary: '#1c1f24', // Eventini
+  primaryForeground: '#ffffff', // Eventini
+  secondary: '#f3f4f6', // Eventini
+  secondaryForeground: '#1c1f24', // Eventini
+  accent: '#f3f4f6', // Eventini
+  accentForeground: '#1c1f24', // Eventini
   destructive: '#ff0000', //             0 100% 50%
   destructiveForeground: '#f8fafc', //   210 40% 98%
-  ring: '#a2e771', //                    95.08 71.08% 67.45%
+  ring: '#1c1f24', // Eventini
   warning: '#e1cb05', //                 54 96% 45%
   envelopeEditorBackground: '#f8fafc', //210 40% 98.04%
   // `cardBorderTint` is intentionally excluded from the colour-picker UI:

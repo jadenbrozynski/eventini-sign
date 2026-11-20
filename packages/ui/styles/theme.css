@@ -297,3 +297,49 @@
 .swagger-dark-theme .swagger-ui .microlight {
   filter: invert(100%) hue-rotate(180deg);
 }
+
+/*
+ * Eventini Sign theme (black-and-white). Light mode is forced in apps/remix/app/root.tsx;
+ * these tokens replace Documenso's green primary everywhere.
+ * Ink #1c1f24, grays #6b707d / #8c919e, hairlines #dbdde3.
+ */
+@layer base {
+  :root,
+  .dark-mode-disabled {
+    --background: 0 0% 100%;
+    --foreground: 217.5 12.5% 12.5%;
+    --muted: 220 14% 97%;
+    --muted-foreground: 223.3 7.8% 45.5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217.5 12.5% 12.5%;
+    --card: 0 0% 100%;
+    --card-border: 225 12.5% 87.5%;
+    --card-border-tint: 28 31 36;
+    --card-foreground: 217.5 12.5% 12.5%;
+    --field-card: 220 14% 97%;
+    --field-card-border: 217.5 12.5% 12.5%;
+    --field-card-foreground: 217.5 12.5% 12.5%;
+    --border: 225 12.5% 87.5%;
+    --input: 225 12.5% 87.5%;
+    --field-border: 225 12.5% 87.5%;
+    --primary: 217.5 12.5% 12.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 217.5 12.5% 12.5%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 217.5 12.5% 12.5%;
+    --ring: 217.5 12.5% 12.5%;
+    --recipient-green: 217.5 12.5% 12.5%;
+    --new-primary-50: 220, 14%, 98%;
+    --new-primary-100: 220, 14%, 96%;
+    --new-primary-200: 225, 12.5%, 87.5%;
+    --new-primary-300: 223, 8%, 72%;
+    --new-primary-400: 223, 8%, 58%;
+    --new-primary-500: 223, 8%, 45%;
+    --new-primary-600: 220, 10%, 32%;
+    --new-primary-700: 218, 12%, 22%;
+    --new-primary-800: 217.5, 12.5%, 12.5%;
+    --new-primary-900: 217.5, 12.5%, 9%;
+    --new-primary-950: 0, 0%, 4%;
+  }
+}
