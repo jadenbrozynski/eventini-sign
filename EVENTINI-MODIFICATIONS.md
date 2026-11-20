@@ -16,5 +16,8 @@ theming only. No signing, auth, storage or data-handling logic was changed:
 - Sign-in copy and layout without the background pattern; marketing links replaced with an
   attribution + "Source" footer (`eventini-source-footer.tsx`, signing pages, email footer).
 - Certificate / audit-log accent colors changed from green to ink.
+- Branding polish (2026-11-19): user-visible product name "Documenso" replaced with "Eventini Sign" in UI copy,
+  email subjects and templates (AGPL credit line kept); Eventini assets in `packages/assets`; green/blue/yellow
+  Tailwind palettes mapped to ink grays; public header with the Eventini lockup on signer and error pages.
 
 Documenso is a trademark of Documenso, Inc. Eventini Sign is not affiliated with or endorsed by Documenso, Inc.
