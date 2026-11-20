@@ -147,7 +147,7 @@ export const EmailDomainsUpsell = () => {
                       transition={{ duration: 0.28, ease: EASE }}
                       className="flex min-w-0 items-center gap-1.5"
                     >
-                      <span className="min-w-0 truncate">{isBranded ? brandedSender.name : 'Documenso'}</span>
+                      <span className="min-w-0 truncate">{isBranded ? brandedSender.name : 'Eventini Sign'}</span>
 
                       {/* Inside the keyed row so it exits with the name and pops back in on every cycle step. */}
                       {isBranded && (
@@ -203,7 +203,7 @@ export const EmailDomainsUpsell = () => {
               animate={{ x: '240%' }}
               transition={{ duration: 1.2, ease: 'easeOut' }}
               className="pointer-events-none absolute inset-y-0 left-0 w-[55%]"
-              style={{ background: 'linear-gradient(105deg, transparent, rgba(162, 231, 113, 0.32), transparent)' }}
+              style={{ background: 'linear-gradient(105deg, transparent, rgba(28, 31, 36, 0.32), transparent)' }}
             />
           </div>
         </div>

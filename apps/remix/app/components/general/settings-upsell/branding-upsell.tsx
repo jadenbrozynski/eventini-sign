@@ -8,31 +8,31 @@ import { useTimedCycle } from './use-timed-cycle';
 
 const DEMO_BRANDS = [
   {
-    name: 'Documenso',
+    name: 'Eventini Sign',
     letter: 'D',
     domain: 'noreply@app.documenso.com',
-    accent: '#A2E771',
-    ink: '#162C07',
-    tint: '#F2FBEA',
-    sheen: 'rgba(162, 231, 113, 0.32)',
+    accent: '#1c1f24',
+    ink: '#ffffff',
+    tint: '#f3f4f6',
+    sheen: 'rgba(28, 31, 36, 0.32)',
   },
   {
-    name: 'Documenso',
+    name: 'Eventini Sign',
     letter: 'D',
     domain: 'noreply@app.documenso.com',
-    accent: '#387BC7',
+    accent: '#6b707d',
     ink: '#ffffff',
     tint: '#EDF3FA',
-    sheen: 'rgba(56, 123, 199, 0.28)',
+    sheen: 'rgba(107, 112, 125, 0.28)',
   },
   {
-    name: 'Documenso',
+    name: 'Eventini Sign',
     letter: 'D',
     domain: 'noreply@app.documenso.com',
     accent: '#9747F5',
     ink: '#ffffff',
     tint: '#F4EDFE',
-    sheen: 'rgba(151, 71, 245, 0.26)',
+    sheen: 'rgba(140, 145, 158, 0.26)',
   },
 ];
 

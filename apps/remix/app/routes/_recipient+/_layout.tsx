@@ -9,6 +9,8 @@ import { ChevronLeft } from 'lucide-react';
 import { useEffect } from 'react';
 import { isRouteErrorResponse, Link, Outlet } from 'react-router';
 import { Header as AuthenticatedHeader } from '~/components/general/app-header';
+import { EventiniPublicHeader } from '~/components/general/eventini-public-header';
+import { EventiniSourceFooter } from '~/components/general/eventini-source-footer';
 import { GenericErrorLayout } from '~/components/general/generic-error-layout';
 import type { Route } from './+types/_layout';
 
@@ -37,6 +39,7 @@ export default function RecipientLayout({ matches }: Route.ComponentProps) {
   return (
     <div className="min-h-screen">
       {!hideHeader && sessionData?.user && <AuthenticatedHeader />}
+      {!hideHeader && !sessionData?.user && <EventiniPublicHeader />}
 
       <main
         className={cn({
@@ -45,6 +48,8 @@ export default function RecipientLayout({ matches }: Route.ComponentProps) {
       >
         <Outlet />
       </main>
+
+      {!hideHeader && <EventiniSourceFooter className="pb-8" />}
     </div>
   );
 }

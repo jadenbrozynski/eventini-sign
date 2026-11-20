@@ -13,14 +13,14 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
 
   return [
     { title: 'Eventini Sign - Share' },
-    { description: 'I just signed a document in style with Documenso!' },
+    { description: 'I just signed a document in style with Eventini Sign!' },
     {
       property: 'og:title',
-      content: 'Documenso - Join the open source signing revolution',
+      content: 'Eventini Sign - Join the open source signing revolution',
     },
     {
       property: 'og:description',
-      content: 'I just signed with Documenso!',
+      content: 'I just signed with Eventini Sign!',
     },
     {
       property: 'og:type',
@@ -44,7 +44,7 @@ export function meta({ params: { slug } }: Route.MetaArgs) {
     },
     {
       name: 'twitter:description',
-      content: 'I just signed with Documenso!',
+      content: 'I just signed with Eventini Sign!',
     },
   ];
 }

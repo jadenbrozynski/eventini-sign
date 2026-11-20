@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-between overflow-hidden bg-background px-4 py-12 md:p-12 lg:p-24">
       <div className="flex w-full flex-1 flex-col items-center justify-center">
-        <BrandingLogo className="mb-8 h-7 w-auto text-foreground" />
+        <BrandingLogo className="mb-8 h-6 w-auto text-foreground" />
 
         <div className="relative flex w-full items-center justify-center">
           <Outlet />

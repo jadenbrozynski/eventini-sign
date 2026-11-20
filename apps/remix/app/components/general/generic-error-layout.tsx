@@ -5,6 +5,7 @@ import { useLingui } from '@lingui/react';
 import { Trans } from '@lingui/react/macro';
 import { ChevronLeft } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
+import { EventiniPublicHeader } from '~/components/general/eventini-public-header';
 
 type ErrorCodeMap = Record<
   number,
@@ -57,6 +58,7 @@ export const GenericErrorLayout = ({
 
   return (
     <div className="fixed inset-0 z-0 flex h-screen w-screen items-center justify-center">
+      <EventiniPublicHeader className="absolute top-0 left-0" />
       <div className="inset-0 mx-auto flex h-full flex-grow items-center justify-center px-6 py-32">
         <div>
           <p className="font-semibold text-muted-foreground">{_(subHeading)}</p>

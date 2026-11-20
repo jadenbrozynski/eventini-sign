@@ -26,7 +26,6 @@ import { match } from 'ts-pattern';
 import { EnvelopeDownloadDialog } from '~/components/dialogs/envelope-download-dialog';
 import { ClaimAccount } from '~/components/general/claim-account';
 import { DocumentSigningAuthPageView } from '~/components/general/document-signing/document-signing-auth-page';
-import { EventiniSourceFooter } from '~/components/general/eventini-source-footer';
 import { RecipientBranding } from '~/components/general/recipient-branding';
 import { useCspNonce } from '~/utils/nonce';
 import type { Route } from './+types/complete';
@@ -296,7 +295,6 @@ export default function CompletedSigningPage({ loaderData }: Route.ComponentProp
             )}
           </div>
         </div>
-        <EventiniSourceFooter className="mt-16" />
       </div>
     </>
   );
