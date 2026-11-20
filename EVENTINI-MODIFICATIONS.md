@@ -20,4 +20,7 @@ theming only. No signing, auth, storage or data-handling logic was changed:
   email subjects and templates (AGPL credit line kept); Eventini assets in `packages/assets`; green/blue/yellow
   Tailwind palettes mapped to ink grays; public header with the Eventini lockup on signer and error pages.
 
+Repository changes (not app behaviour): upstream GitHub Actions workflows removed (they target Documenso's own
+infrastructure); `docker/Dockerfile` base image pinned by digest.
+
 Documenso is a trademark of Documenso, Inc. Eventini Sign is not affiliated with or endorsed by Documenso, Inc.
